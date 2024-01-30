@@ -42,6 +42,8 @@ Please not that I have excluded .env ONLY FOR THIS project so you can directly c
 
 ## API Reference
 
+FYI, you can also refer to the OpenAPI spec by visiting [http://localhost:8000/docs](http://localhost:8000/docs)
+
 #### Get all products
 
 ```http
@@ -157,6 +159,65 @@ Example response with status 404:
     "detail": "Product abc not found"
 }
 ```
+
+## MongoDB Data Structure
+
+Orders collection
+```json
+{
+  "_id": {
+    "$oid": "65b79fb2af81628a0f1a7529"
+  },
+  "items": [
+    {
+      "product_id": "65b79ef93a27326b787ed9a9",
+      "bought_quantity": 100
+    },
+    {
+      "product_id": "65b79f503a27326b787ed9ad",
+      "bought_quantity": 50
+    }
+  ],
+  "total_amount": 1000,
+  "user_address": {
+    "city": "ABC",
+    "country": "IN",
+    "zip_code": 123456
+  },
+  "created_on": {
+    "$date": "2024-01-29T12:53:06.409Z"
+  }
+}
+```
+
+Products collection
+```json
+{
+  "_id": {
+    "$oid": "65b79fb2af81628a0f1a7529"
+  },
+  "items": [
+    {
+      "product_id": "65b79ef93a27326b787ed9a9",
+      "bought_quantity": 100
+    },
+    {
+      "product_id": "65b79f503a27326b787ed9ad",
+      "bought_quantity": 50
+    }
+  ],
+  "total_amount": 1000,
+  "user_address": {
+    "city": "ABC",
+    "country": "IN",
+    "zip_code": 123456
+  },
+  "created_on": {
+    "$date": "2024-01-29T12:53:06.409Z"
+  }
+}
+```
+
 ## Further optimizations
 
 Due to lack of time, I could not add one logical check: 
