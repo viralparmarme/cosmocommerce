@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "76cb9b97-e6a5-4934-9535-f5f06455b1b0",
+		"name": "Cosmocommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19279853"
+	},
+	"item": [
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/products"
+			},
+			"response": []
+		},
+		{
+			"name": "List Product by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/products/65b79ef93a27326b787ed9a9"
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"product_id\": \"65b79f433a27326b787ed9ac\",\n            \"bought_quantity\": 10\n        },\n\n        {\n            \"product_id\": \"65b79f503a27326b787ed9ad\",\n            \"bought_quantity\": 5\n        }\n    ],\n    \"total_amount\": 1000,\n    \"user_address\": {\n        \"city\": \"ABC\",\n        \"country\": \"IN\",\n        \"zip_code\": 123456\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/orders"
+			},
+			"response": []
+		}
+	]
+}
