@@ -44,6 +44,8 @@ Please not that I have excluded .env ONLY FOR THIS project so you can directly c
 
 FYI, you can also refer to the OpenAPI spec by visiting [http://localhost:8000/docs](http://localhost:8000/docs)
 
+Also, you can simply load the [Postman collection](https://github.com/viralparmarme/cosmocommerce/blob/main/Cosmocommerce.postman_collection.json) to your computer.
+
 #### Get all products
 
 ```http
